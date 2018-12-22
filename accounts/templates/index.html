@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HOME</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <script src="/static/js/jquery.js"></script>
+
+    <script src="/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <link href='/static/css/fontsofia.css' rel='stylesheet'>
+    <link href="/static/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- <link href="/static/css/bootstrap.font-awesome.min.css.4.6.3"> -->
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/index.css">
+    <script type="text/javascript" src="/static/js/index.js"></script>
+
+</head>
+
+<body>
+
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid" id="home">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                        </button>
+                    <a class="navbar-brand" href="#"><img src="/static/images/logo.jpg" width="52" alt=""></a>
+                </div>
+                <div class="collapse navbar-collapse js-navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li class="dropdown mega-dropdown ">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects </a>
+                            <ul class="dropdown-menu mega-dropdown-menu row">
+                                <li class="col-sm-3">
+                                    <ul>
+                                        <li class="dropdown-header">New projects</li>
+                                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-inner">
+                                                <div class="item active">
+                                                    <a href="#"><img src="http://placehold.it/254x150/3498db/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 1"></a>
+                                                    <h4><small>Vue.js</small></h4>
+                                                    <button class="btn btn-primary" type="button">49,99 €</button>
+                                                    <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
+                                                </div>
+                                                <div class="item">
+                                                    <a href="#"><img src="http://placehold.it/254x150/ef5e55/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 2"></a>
+                                                    <h4><small>React.js</small></h4>
+                                                    <button class="btn btn-primary" type="button">9,99 €</button>
+                                                    <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
+                                                </div>
+                                                <div class="item">
+                                                    <a href="#"><img src="http://placehold.it/254x150/2ecc71/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 3"></a>
+                                                    <h4><small>HTML</small></h4>
+                                                    <button class="btn btn-primary" type="button">49,99 €</button>
+                                                    <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <li class="divider"></li>
+                                        <li><a href="#">View all projects <span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="col-sm-3">
+                                    <ul>
+                                        <li class="dropdown-header">Projects</li>
+                                        <li><a href="#">Engineering</a></li>
+                                        <li><a href="#">Automobile</a></li>
+                                        <li><a href="#">Mobile Apps</a></li>
+                                        <li><a href="#">Robotics</a></li>
+                                        <li><a href="#">Web-design</a></li>
+                                        <li class="divider"></li>
+                                        <li class="dropdown-header">Freelancers</li>
+                                        <li><a href="#">5 stared</a></li>
+                                    </ul>
+                                </li>
+                                <li class="col-sm-3">
+                                    <ul>
+                                        <li class="dropdown-header"></li>
+                                        <li><a href="#">Easy to customize</a></li>
+                                        <li><a href="#">Glyphicons</a></li>
+                                        <li><a href="#">Pull Right Elements</a></li>
+                                        <li class="divider"></li>
+                                        <li class="dropdown-header">Pants</li>
+                                        <li><a href="#">Coloured Headers</a></li>
+                                        <li><a href="#">Primary Buttons & Default</a></li>
+                                        <li><a href="#">Calls to action</a></li>
+                                    </ul>
+                                </li>
+                                <li class="col-sm-3">
+                                    <ul>
+                                        <li class="dropdown-header">Accessories</li>
+                                        <li><a href="#">Default Navbar</a></li>
+                                        <li><a href="#">Lovely Fonts</a></li>
+                                        <li><a href="#">Responsive Dropdown </a></li>
+                                        <li class="divider"></li>
+                                        <li class="dropdown-header">Newsletter</li>
+                                        <form class="form" role="form">
+                                            <div class="form-group">
+                                                <label class="sr-only" for="email">Email address</label>
+                                                <input type="email" class="form-control" id="email" placeholder="Enter email">
+                                            </div>
+                                            <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                        </form>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#content-wrapper">Users</a></li>
+                        <li><a href="#">About us</a></li>
+                    </ul>
+                    <ul id="fake-nav" class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#register" data-toggle="modal" data-target=".registerModal" onclick="hashregister()" class="registerButton"><span class="glyphicon glyphicon-user"></span>Register</a>
+                        </li>
+                        <li>
+                            <a href="#login" data-toggle="modal" data-target=".loginModal" id="login" onclick="hashlogin()" class="loginButton"><span class="glyphicon glyphicon-log-in"></span>Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="background-carousel">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="item active" style="background-image:url(/static/images/image11.jpg)"></div>
+                    <div class="item" style="background-image:url(/static/images/image6.jpg)"></div>
+                    <div class="item " style="background-image:url(/static/images/image1.jpg"></div>
+                    <div class="item" style="background-image:url(/static/images/image2.jpg"></div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div id="content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card-container">
+                            <div class="card">
+                                <div class="front">
+                                    <div class="cover">
+                                        <img src="https://www.clipartsgram.com/image/129556292-kyz84k3.jpg" />
+                                    </div>
+                                    <div class="user">
+                                        <img class="img-circle" src="https://www2.mmu.ac.uk/media/mmuacuk/style-assets/images/r-research/profile-Zeyad.jpg" />
+                                    </div>
+                                    <div class="content">
+                                        <div class="main">
+                                            <h3 class="name">John Marvel</h3>
+                                            <p class="profession">CEO</p>
+                                            <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it anywhere, yeah, they love me everywhere"</p>
+                                        </div>
+                                        <div class="footer">
+                                            <i class="fa fa-mail-forward"></i> Auto Rotation
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <div class="header">
+                                        <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
+                                    </div>
+                                    <div class="content">
+                                        <div class="main">
+                                            <h4 class="text-center">Job Description</h4>
+                                            <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...</p>
+                                            <div class="stats-container">
+                                                <div class="stats">
+                                                    <h4>235</h4>
+                                                    <p>
+                                                        Followers
+                                                    </p>
+                                                </div>
+                                                <div class="stats">
+                                                    <h4>114</h4>
+                                                    <p>
+                                                        Following
+                                                    </p>
+                                                </div>
+                                                <div class="stats">
+                                                    <h4>35</h4>
+                                                    <p>
+                                                        Projects
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="footer">
+                                        <div class="social-links text-center">
+                                            <a href="http:///" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                                            <a href="http:///" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+                                            <a href="http:///" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card-container">
+                            <div class="card">
+                                <div class="front">
+                                    <div class="cover">
+                                        <img src="https://www.clipartsgram.com/image/129556292-kyz84k3.jpg" />
+                                    </div>
+                                    <div class="user">
+                                        <img class="img-circle" src="https://www2.mmu.ac.uk/media/mmuacuk/style-assets/images/r-research/profile-Zeyad.jpg" />
+                                    </div>
+                                    <div class="content">
+                                        <div class="main">
+                                            <h3 class="name">John Marvel</h3>
+                                            <p class="profession">CEO</p>
+                                            <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it anywhere, yeah, they love me everywhere"</p>
+                                        </div>
+                                        <div class="footer">
+                                            <i class="fa fa-mail-forward"></i> Auto Rotation
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <div class="header">
+                                        <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
+                                    </div>
+                                    <div class="content">
+                                        <div class="main">
+                                            <h4 class="text-center">Job Description</h4>
+                                            <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...</p>
+                                            <div class="stats-container">
+                                                <div class="stats">
+                                                    <h4>235</h4>
+                                                    <p>
+                                                        Followers
+                                                    </p>
+                                                </div>
+                                                <div class="stats">
+                                                    <h4>114</h4>
+                                                    <p>
+                                                        Following
+                                                    </p>
+                                                </div>
+                                                <div class="stats">
+                                                    <h4>35</h4>
+                                                    <p>
+                                                        Projects
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="footer">
+                                        <div class="social-links text-center">
+                                            <a href="http://facebook.com" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                                            <a href="http:///" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+                                            <a href="http:///" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end back panel -->
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card-container">
+                            <div class="card">
+                                <div class="front">
+                                    <div class="cover">
+                                        <img src="https://www.clipartsgram.com/image/129556292-kyz84k3.jpg" />
+                                    </div>
+                                    <div class="user">
+                                        <img class="img-circle" src="https://1.bp.blogspot.com/-aruLLVlXyJM/V_t-TxTncZI/AAAAAAAAJ3k/hnQKKVmKuOY_awf1nHGTsukGfw4qrde-gCLcB/s400/2.jpg" />
+                                    </div>
+                                    <div class="content">
+                                        <div class="main">
+                                            <h3 class="name">Inna Corman</h3>
+                                            <p class="profession">Product Manager</p>
+                                            <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it anywhere, yeah, they love me everywhere"</p>
+                                        </div>
+                                        <div class="footer">
+                                            <div class="rating">
+                                                <i class="fa fa-mail-forward"></i> Auto Rotation
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end front panel -->
+                                <div class="back">
+                                    <div class="header">
+                                        <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
+                                    </div>
+                                    <div class="content">
+                                        <div class="main">
+                                            <h4 class="text-center">Job Description</h4>
+                                            <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...</p>
+                                            <div class="stats-container">
+                                                <div class="stats">
+                                                    <h4>235</h4>
+                                                    <p>
+                                                        Followers
+                                                    </p>
+                                                </div>
+                                                <div class="stats">
+                                                    <h4>114</h4>
+                                                    <p>
+                                                        Following
+                                                    </p>
+                                                </div>
+                                                <div class="stats">
+                                                    <h4>35</h4>
+                                                    <p>
+                                                        Projects
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="footer">
+                                        <div class="social-links text-center">
+                                            <a href="http://facebook.com" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                                            <a href="http://mail.google.com/" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+                                            <a href="http://twitter.com/" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end back panel -->
+                            </div>
+                            <!-- end card -->
+                        </div>
+                        <!-- end card-container -->
+                    </div>
+                    <!-- end col-sm-3 -->
+                </div>
+                <!-- end col-sm-10 -->
+            </div>
+            <!-- end row -->
+            <div class="space-200"></div>
+            <!--LOGİN MODAL -->
+        </div>
+        <div id="justpushtobottom"> </div>
+        <footer class="footer p-t-1">
+            <div class="container">
+                <div class="pull-right">
+                    <nav class="navbar" style="background:transparent; color: black;">
+                        <nav class="nav navbar-nav pull-xs-left">
+                            <a class="nav-item nav-link" href="#">Home</a>
+                            <a class="nav-item nav-link" href="#">About</a>
+                            <a class="nav-item nav-link" href="#">Download App</a>
+                            <a class="nav-item nav-link" href="#">Help</a>
+                        </nav>
+                    </nav>
+                </div>
+                <a href="#"><i class="fa fa-facebook-official fa-2x"></i></a>
+                <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+                <a href="#"><i class="fa fa-flickr fa-2x"></i></a>
+                <a href="#"><i class="fa fa-linkedin fa-2x"></i></a>
+                <p class="h6">
+                    Powered by IIIT.AC.IN
+                    <a href="http://www.pascal.iiit.ac.in"></a>
+                </p>
+            </div>
+        </footer>
+        <div class="modal fade loginModal LoginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="text-center"><img src="/static/images/logo.jpg" width="100" alt=""></div>
+                <div class="hidden text-center invalid">
+                    <div class="control-group error">
+                        <label class="control-label" for="inputError" style="color:red">INVALID CREDENTIALS</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="name" class="loginstyle" id="inputUsername" placeholder="Username" style="font-family:Arial, FontAwesome" name="username">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="loginstyle" id="inputPassword" placeholder="Password" style="font-family:Arial, FontAwesome" name="password">
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-danger btn-lg " onclick="existingUserlogin()">Login</button>
+                </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal fade registerModal RegisterModal" tabindex="-1" role="dialog" aria-labelledby="RegisterModal">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="login" id="register">
+                    <div class="text-center"><img src="/static/images/logo.jpg" width="100" alt=""></div>
+                    <div class="hidden text-center invalid"><span style="color:red">INVALID INPUT</span> </div>
+                    <div class="form-group">
+                        <input type="name" class="registerstyle" min="1" max="5" id="inputRegisterUsername" placeholder="Username" style="font-family:Arial, FontAwesome" name="username">
+                    </div>
+                    <div class="form-group">
+                        <input type="name" class="registerstyle" id="inputRegisterFirstName" placeholder="First Name " style="font-family:Arial, FontAwesome" name="fname">
+                    </div>
+                    <div class="form-group">
+                        <input type="name" class="registerstyle" id="inputRegisterLastName" placeholder="Last Name " style="font-family:Arial, FontAwesome" name="lname">
+                    </div>
+                    <div class="form-group">
+                        <input type="e-mail" class="registerstyle" id="inputRegisterEmail" placeholder="E-mail " style="font-family:Arial, FontAwesome" name="email">
+                    </div>
+                    <div class="form-group">
+                        <div class="radio">
+                            <label><input type="radio" name="userType" value="freelancer" id="inputRegisterUserType" ><span style="color:grey;font-family:Arial;font-weight: bold;">Freelancer</span></label>
+                            <label><input type="radio"  name="userType" value="projectPoster" id="inputRegisterUserType"><span style="font-family:Arial;color:grey;font-weight: bold;">Project-poster</span></label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="registerstyleotp" placeholder="verify otp" id="otp" style="font-family:Arial, FontAwesome" name="otp" />
+                            <a href="/#register" id="inputOtp" class="btn btn-success  btn-active" value="as"><span class="glyphicon glyphicon-send"></span> Send otp</a>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="registerstyle" min="5" max="10" id="inputRegisterPassword" placeholder="Password(Min 8 chars)" style="font-family:Arial, FontAwesome" name="password">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="registerstyle" min="5" max="10" id="inputRegisterPasswordConfirm" placeholder="Password confirm(Min 8 chars)" style="font-family:Arial, FontAwesome" name="confirm_password">
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-danger btn-lg btn-active" onclick="makeUser()">Register</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

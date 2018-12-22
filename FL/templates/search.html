@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Search results</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <script src="/static/js/jquery.js"></script>
+
+    <script src="/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <link href='/static/css/fontsofia.css' rel='stylesheet'>
+    <link href="/static/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/search.css">
+    <script type="text/javascript" src="/static/js/search.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+
+     </button>
+                <a class="navbar-brand-logo" href="#"><img src="/static/images/logo.jpg" width="52" alt=""></a>
+            </div>
+            <div class="collapse navbar-collapse navbar-form " id="myNavbar">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="search_pro_name">
+                    <div class="input-group-btn">
+                        <a class="btn btn-default">
+                            <span class="glyphicon glyphicon-search" onclick="(search())"></span></a>
+                    </div>
+                </div>
+                <ul id="fake-nav" class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/" class="registerButton"><span class="glyphicon glyphicon-user"></span>Home</a>
+                    </li>
+                    <li>
+                        <a href="signout" class="registerButton"><span class="glyphicon glyphicon-log-out"></span>Sign Out</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <div class="container-fluid">
+        <br/>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-sm-3">
+            <div id="accordion" class="panel panel-primary behclick-panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Sort By</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="panel-heading ">
+                        <h4 class="panel-title">
+                            <a href="#">
+                                <input type="radio" name="ordering" value="bids" checked="checked">Popularity
+                            </a>
+                        </h4>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="panel-heading ">
+                        <h4 class="panel-title">
+                            <a href="#">
+                                <input type="radio" name="ordering" value="budget">Budget
+                            </a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div id="accordion" class="panel panel-primary behclick-panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Filter By</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse2"><i class="indicator fa fa-caret-down" aria-hidden="true"></i> Skills</a>
+                        </h4>
+                    </div>
+                    <div id="collapse2" class="panel-collapse collapse in">
+                        <div id="skillsBody">
+                        </div>
+                    </div>
+
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <button onclick="(search())">Submit</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+            <div class="container">
+                <hgroup class="mb20">
+                    <h1>Search Results</h1>
+                    <h2 class="lead" id="searchResults"></h2>
+                </hgroup>
+                <section class="col-xs-12 col-sm-6 col-md-12" id="projectPopulate">
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Place Bid</h4>
+                </div>
+                <div class="modal-body">
+                    <!-- <div class="container"> -->
+                    <div class="price-box">
+                        <form class="form-horizontal form-pricing" role="form">
+                            <div class="price-slider">
+                                <h4 class="great">Amount</h4>
+                                <span>Minimum $10 is required</span>
+                                <div class="col-sm-12">
+                                    <div id="slider"></div>
+                                </div>
+                            </div>
+                            <div class="price-slider">
+                                <h4 class="great">Duration</h4>
+                                <span>Minimum 1 day is required</span>
+                                <div class="col-sm-12">
+                                    <div id="slider2"></div>
+                                </div>
+                            </div>
+                            <div class="price-form">
+                                <div class="form-group">
+                                    <label for="amount" class="col-sm-6 control-label">Amount ($): </label>
+                                    <span class="help-text">Please choose your amount</span>
+                                    <div class="col-sm-6">
+                                        <input type="hidden" id="amount" class="form-control">
+                                        <p class="price lead" id="amount-label"></p>
+                                        <span class="price">.00</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="duration" class="col-sm-6 control-label">Duration: </label>
+                                    <span class="help-text">Choose your commitment</span>
+                                    <div class="col-sm-6">
+                                        <input type="hidden" id="duration" class="form-control">
+                                        <p class="price lead" id="duration-label"></p>
+                                        <span class="price">days</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <input type="button" value="Place Bid" class="btn btn-primary btn-lg btn-block" onclick="placeBid()" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+    <div id="justpushtobottom"> </div>
+    <footer class="footer p-t-1">
+        <div class="container-fluid">
+            <div class="pull-right">
+                <nav class="navbar" style="background:transparent; color: black;">
+                    <nav class="nav navbar-nav pull-xs-left">
+                        <a class="nav-item nav-link" href="google.com">Home</a>
+                        <a class="nav-item nav-link" href="#">About</a>
+                        <a class="nav-item nav-link" href="#">Download App</a>
+                        <a class="nav-item nav-link" href="#">Help</a>
+                    </nav>
+                </nav>
+            </div>
+            <a href="#"><i class="fa fa-facebook-official fa-2x"></i></a>
+            <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+            <a href="#"><i class="fa fa-flickr fa-2x"></i></a>
+            <a href="#"><i class="fa fa-linkedin fa-2x"></i></a>
+            <p class="h6">
+                Powered by IIIT.AC.IN
+                <a href="http://www.pascal.iiit.ac.in"></a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

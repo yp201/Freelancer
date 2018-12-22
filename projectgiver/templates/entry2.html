@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+    <title>PROJECT GIVER USERPAGE</title>
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <script src="/static/js/jquery.js"></script>
+
+
+    <script src="/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <link href='/static/css/fontsofia.css' rel='stylesheet'>
+    <link href="/static/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/entry2.css">
+</head>
+
+<body class="home">
+    <div class="container-fluid display-table">
+        <div class="row display-table-row">
+            <div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box" id="navigation">
+                <div class="logo">
+                    <a href="#"><img src="/static/images/logo.jpg" alt="logo" class="hidden-xs hidden-sm">
+                    </a>
+                </div>
+                <div class="navi">
+                    <ul>
+                        <li class="active Home" onclick="remover('Home')"><a href="#"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Home</span></a></li>
+                        <li class="OngoingProjects" onclick="remover('OngoingProjects')"><a href="#"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Ongoing Projects</span></a></li>
+                        <li class="PastProjects" onclick="remover('PastProjects')"><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Past Projects</span></a></li>
+                        <li class="Bids" onclick="remover('Bids')"><a href="#"><i class="fa fa-credit-card" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Bids</span></a></li>
+                        <li id="EditProfile" onclick="remover('EditProfile')"><a href="#"><i class="fa fa-cog" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Edit Profile</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-10 col-sm-11 display-table-cell v-align">
+                <div class="row">
+                    <header>
+                        <div class="col-md-7">
+                            <nav class="navbar-default pull-left">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="offcanvas" data-target="#side-menu" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+                                    <ul>
+                                        <li>
+                                            <div class="bootsnipp-search">
+                                                <div id="search-bar" class="container-fluid ">
+                                                    <form action="#" method="GET" role="search">
+                                                        <div class="input-group">
+                                                            <input class="form-control" name="q" placeholder="Search" type="text">
+                                                            <span class="input-group-btn">
+                                          <a class="btn btn-danger btn-xs" onclick="remover('Find');"><span class="glyphicon glyphicon-search"></span></a>
+                                                            </span>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="header-rightside">
+                                <ul class="list-inline header-top pull-right">
+                                    <li class="hidden-xs"><a href="#" class="add-project" data-toggle="modal" data-target="#add_project">Add Project</a></li>
+                                    <li><a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></i></a></li>
+                                    <li class="dropdown" id="viewNotification">
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="" class='image' alt="user">
+                                            <b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <div class="navbar-content">
+                                                    <span id="f-l-name"><!-- {{project_giver.first_name}} {{project_giver.last_name}} --></span>
+                                                    <p class="text-muted small e-id">
+                                                        <!-- {{project_giver.emailAddress}} -->
+                                                    </p>
+                                                    <div class="divider">
+                                                    </div>
+                                                    <a href="signout" class="view btn-sm active">Sign Out</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </header>
+                </div>
+                <div class="col-xs-26 col-sm-20 col-md-9 col-md-offset-1 user-dashboard">
+                    <h1 id="fill"></h1>
+                </div>
+                <div class="Homediv common">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="panel panel-default panel-table">
+                            <div class="panel-body">
+                                <div class="col-sm-6 col-md-4">
+                                    <img src="" alt="image" class="img-rounded img-responsive image" />
+                                </div>
+                                <div class="col-sm-6 col-md-8">
+                                    <h4 id="head4"></h4>
+                                    <p>
+                                        <i class="glyphicon glyphicon-envelope"></i><span class="e-id">
+                                                   </span> <br />
+                                        <i class="glyphicon glyphicon-user"></i><span class="usen" id="username"></span>
+                                        <br/>
+                                        <br />
+                                        <span id="stars"></span>
+                                    </p>
+                                    <p id="rating"></p>
+                                    <!-- Split button -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden common OngoingProjectsdiv">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="panel panel-default panel-table">
+                            <div class="panel-body">
+                                <table class="table table-striped table-bordered table-list">
+                                    <thead>
+                                        <tr>
+                                            <th>Mark As Done</th>
+                                            <th>Name</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="Ongotable">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden common PastProjectsdiv">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="panel panel-default panel-table">
+                            <div class="panel-body">
+                                <table class="table table-striped table-bordered table-list">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="compTable">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden common Bidsdiv">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="panel panel-default panel-table">
+
+                            <div class="panel-body">
+                                <table class="table table-striped table-bordered table-list">
+                                    <thead>
+                                        <tr>
+                                            <!-- <th><em class="fa fa-cog"></em></th> -->
+                                            <th>Assign</th>
+                                            <th>Title</th>
+                                            <th>Bidder</th>
+                                            <th>Bid Amount</th>
+                                            <th>Time Frame</th>
+                                            <th>Budget</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="bidsTable">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden EditProfilediv common">
+                    <div class="Successmessage container hidden">
+                        <h3 style="text-align: center;color: green">Profile updated successfully</h3>
+                    </div>
+                    <div class="Errormessage container hidden">
+                        <h3 style="text-align: center;color: red">Error</h3>
+                    </div>
+                    <hr />
+                    <br/>
+                    <h3 style="text-align: center;">Personal info</h3>
+                    <br/>
+                    <br/>
+                    <div class="panel-table">
+                        <form action="editpic" enctype="multipart/form-data" method="POST">
+                            <div class="col-md-3">
+                                <div class="text-center">
+                                    <img src="" style="width: 120px" class="image avatar img-circle" alt="image">
+                                    <h6>Upload a different photo...</h6>
+                                    <!-- <form> -->
+                                    <input type="text" class="hidden" id="csrf" name="csrfmiddlewaretoken" value="">
+                                    <input class="form-control" type="file" name="profile_image">
+                                    <br/>
+                                    <input class="btn btn-primary" value="Upload Profile Picture" type="submit">
+                        </form>
+                        </div>
+                        </div>
+                        </form>
+                        <div class="col-md-9 personal-info">
+                            <form id="edit-user" class="form-horizontal" role="form" enctype="multipart/form-data" action="#">
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">First name:</label>
+                                    <div class="col-lg-8">
+                                        <input class="form-control" value="" type="text" name="fname">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Last name:</label>
+                                    <div class="col-lg-8">
+                                        <input class="form-control" value="" type="text" name="lname">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label">Email:</label>
+                                        <div class="col-lg-8">
+                                            <input class="form-control" value="" type="text" name="email">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label"></label>
+                                        <div class="col-md-8">
+                                            <input type="button" class="btn btn-primary" value="Save Changes" onclick="makeEditedUser()">
+                                            <span></span>
+                                            <input class="btn btn-default" value="Cancel" type="reset">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div id="add_project" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header login-header">
+                            <button type="button" class="close" data-dismiss="modal">×</button>
+                            <h4 class="modal-title">Add Project</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form method="POST" action="addPro">
+                                <input type="text" placeholder="Project Title" name="Title">
+                                <input type="text" placeholder="Budget" name="budget">
+                                <input type="date" placeholder="Deadline(##/##/####)" name="deadline">
+                                <select id="options" name="project_skills" multiple="multiple" class="selectpicker" style="width: 100%">
+                                       </select>
+                                <div class="modal-content" id="sel">
+                                </div>
+                                <textarea name="description" placeholder="Desicrption"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="cancel" data-dismiss="modal">Close</button>
+                            <input type="button" class="add-project" value="Save" onclick="add()" />
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade bs-example-modal-lg modal2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                <div class="modal-dialog modal-lg modal2">
+                    <div class="modal-content modal2">
+
+
+                        <div class="modal-body modal2">
+                            <h2 style="text-weight:bold">Please Rate The Freelancer</h2>
+                            <fieldset class="rating">
+                                <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                                <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                                <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                                <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Not that great">1 star</label>
+                            </fieldset><br /><br />
+                            <button type="button" class="btn btn-danger" onclick="complete()"><span>Submit Rating</span></button>
+                            <br /><br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="/static/js/jquery.js"></script>
+    <script type="text/javascript" src="/static/js/entry2.js"></script>
+</body>
+
+</html>
